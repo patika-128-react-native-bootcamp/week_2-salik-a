@@ -3,17 +3,13 @@
 import React from 'react';
 import {
   SafeAreaView,
-  Text,
-  View,
 } from 'react-native';
-
-
-
+import MainScreen from './screens/MainScreen';
 const App = () => {
 
   return (
     <SafeAreaView >
-      <Text>App</Text>
+      <MainScreen />
     </SafeAreaView>
   );
 };
