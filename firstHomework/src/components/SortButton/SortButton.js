@@ -1,16 +1,16 @@
 import React from 'react';
 import {
-    SafeAreaView,
+    TouchableOpacity,
     Text,
     View,
 } from 'react-native';
+import styles from "./SortButtonStyle"
 
-
-const SortButton = () => {
+const SortButton = ({ title, onPress }) => {
     return (
-        <SafeAreaView>
-            <Text>SortButton</Text>
-        </SafeAreaView>
+        <TouchableOpacity style={styles.container} onPress={onPress}>
+            <Text style={styles.title}>{title}</Text>
+        </TouchableOpacity>
     );
 };
 

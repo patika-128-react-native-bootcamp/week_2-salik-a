@@ -1,16 +1,19 @@
 import React from 'react';
 import {
-    SafeAreaView,
     Text,
     View,
 } from 'react-native';
+import styles from "./ProductCardStyle"
 
+const ProductCard = ({ data }) => {
 
-const ProductCard = () => {
     return (
-        <SafeAreaView>
-            <Text>ProductCard</Text>
-        </SafeAreaView>
+        <View style={styles.container}>
+            <View style={styles.innerContainer}>
+                <Text style={styles.name}>{data.name}</Text>
+                <Text style={styles.price}>{data.price} TL</Text>
+            </View>
+        </View>
     );
 };
 
