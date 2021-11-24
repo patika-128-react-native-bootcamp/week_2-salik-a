@@ -1,16 +1,15 @@
 import React from 'react';
 import {
-    SafeAreaView,
     Text,
-    View,
+    TouchableOpacity
 } from 'react-native';
+import styles from "./AddButtonStyle"
 
-
-const AddButton = () => {
+const AddButton = ({ title, onPress }) => {
     return (
-        <SafeAreaView>
-            <Text>AddButton</Text>
-        </SafeAreaView>
+        <TouchableOpacity style={styles.container} onPress={onPress}>
+            <Text style={styles.title}>{title}</Text>
+        </TouchableOpacity>
     );
 };
 
