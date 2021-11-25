@@ -5,9 +5,9 @@ export default StyleSheet.create({
     container: {
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "gainsboro",
+        backgroundColor: "#cfd8dc",
         width: "30%",
-        borderColor: "slategray",
+        borderColor: "#34515f",
         borderWidth: 1,
         marginVertical: 20,
         borderRadius: 5,
@@ -15,6 +15,6 @@ export default StyleSheet.create({
     },
     title: {
         fontSize: 16,
-        color: "slategray"
+        color: "#34515f"
     }
 })

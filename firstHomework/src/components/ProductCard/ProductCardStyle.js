@@ -14,11 +14,11 @@ export default StyleSheet.create({
         marginBottom: 8
     },
     name: {
-        color: "slategray",
+        color: "#34515f",
         fontSize: 16
     },
     price: {
-        color: "slategray",
+        color: "#34515f",
         fontWeight: "bold",
         fontSize: 18
     }

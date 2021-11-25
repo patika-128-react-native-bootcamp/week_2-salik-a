@@ -27,11 +27,11 @@ const Main = () => {
 
     const sortData = (text) => {
         if (text === "increase") {
-            const sorted = data.sort((a, b) => b.price - a.price);
+            const sorted = data.sort((a, b) => a.price - b.price);
             setData(sorted)
             console.log(sort, sorted)
         } else if (text === "decrease") {
-            const sorted = data.sort((a, b) => a.price - b.price);
+            const sorted = data.sort((a, b) => b.price - a.price);
             setData(sorted)
             console.log(sort, sorted)
         } else {

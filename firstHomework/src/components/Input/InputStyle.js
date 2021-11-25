@@ -9,7 +9,7 @@ export default StyleSheet.create({
     },
     input: {
         flex: 1,
-        backgroundColor: "gainsboro",
+        backgroundColor: "#eceff1",
         paddingHorizontal: 5,
         borderRadius: 5
     }
