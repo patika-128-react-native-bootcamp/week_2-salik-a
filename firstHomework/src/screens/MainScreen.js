@@ -13,10 +13,9 @@ import SortButton from '../components/SortButton/SortButton';
 const Main = () => {
 
     const [data, setData] = useState([]);
-    const [sort, setSort] = useState("");
+    const [sort, setSort] = useState("history");
 
     useEffect(() => {
-        console.log(sort)
         sortData(sort)
     }, [data])
 
@@ -28,16 +27,13 @@ const Main = () => {
     const sortData = (text) => {
         if (text === "increase") {
             const sorted = data.sort((a, b) => a.price - b.price);
-            setData(sorted)
-            console.log(sort, sorted)
+            setData(sorted);
         } else if (text === "decrease") {
             const sorted = data.sort((a, b) => b.price - a.price);
-            setData(sorted)
-            console.log(sort, sorted)
+            setData(sorted);
         } else {
             const sorted = data.sort((a, b) => b.date - a.date);
-            setData(sorted)
-            console.log(sort, sorted)
+            setData(sorted);
         }
         setSort(text)
     }
@@ -45,9 +41,9 @@ const Main = () => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <SortButton title="Artan Fiyat" onPress={() => sortData("increase")} />
-                <SortButton title="Azalan Fiyat" onPress={() => sortData("decrease")} />
-                <SortButton title="Tarih" onPress={() => sortData("history")} />
+                <SortButton title="Artan Fiyat" clicked={sort === "increase" ? true : false} onPress={() => sortData("increase")} />
+                <SortButton title="Azalan Fiyat" clicked={sort === "decrease" ? true : false} onPress={() => sortData("decrease")} />
+                <SortButton title="Tarih" clicked={sort === "history" ? true : false} onPress={() => sortData("history")} />
             </View>
             <FlatList
                 data={data}

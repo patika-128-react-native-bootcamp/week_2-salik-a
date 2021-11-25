@@ -6,10 +6,13 @@ import {
 } from 'react-native';
 import styles from "./SortButtonStyle"
 
-const SortButton = ({ title, onPress }) => {
+const SortButton = ({ title, onPress, clicked }) => {
+
+
+    const theme = clicked ? "primary" : "secondary";
     return (
-        <TouchableOpacity style={styles.container} onPress={onPress}>
-            <Text style={styles.title}>{title}</Text>
+        <TouchableOpacity style={styles[theme].container} onPress={onPress}>
+            <Text style={styles[theme].title}>{title}</Text>
         </TouchableOpacity>
     );
 };

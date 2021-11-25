@@ -1,7 +1,6 @@
 import { StyleSheet } from "react-native";
 
-export default StyleSheet.create({
-
+const base_style = StyleSheet.create({
     container: {
         justifyContent: "center",
         alignItems: "center",
@@ -16,5 +15,23 @@ export default StyleSheet.create({
     title: {
         fontSize: 16,
         color: "#34515f"
-    }
+
+    },
 })
+export default {
+    secondary: StyleSheet.create({
+        ...base_style,
+    }),
+    primary: StyleSheet.create({
+        ...base_style,
+        container: {
+            ...base_style.container,
+            backgroundColor: "#34515f",
+        },
+        title: {
+            ...base_style.title,
+            color: "white"
+        },
+
+    }),
+}
