@@ -7,6 +7,8 @@ import styles from "./ProductCardStyle"
 
 const ProductCard = ({ data }) => {
 
+    //productcard gets data value from flatlist 
+    //and shows name and price value side by side
     return (
         <View style={styles.container}>
             <View style={styles.innerContainer}>

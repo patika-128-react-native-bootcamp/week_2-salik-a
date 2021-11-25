@@ -8,6 +8,9 @@ import {
 import styles from "./InputStyle"
 
 const Input = ({ value, onChangeText }) => {
+
+    //Input has value and onchangetext props
+    //onChangeText set value into states
     return (
         <SafeAreaView style={styles.container}  >
             <TextInput

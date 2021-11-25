@@ -10,17 +10,26 @@ import AddButton from '../AddButton/AddButton';
 
 const InputCard = ({ data, setData }) => {
 
-    const [name, setName] = useState();
-    const [price, setPrice] = useState();
+    //inputcard has data and setData props and I used this to set product object into data array
 
+    const [name, setName] = useState();//name state used to get and store name value from name input
+    const [price, setPrice] = useState();//price state used to get and store price value from price input
+
+    //when we clicked add button handlepress function works
+    //we keep name, price, date value in object
+    //and if they are not empty I set this object into data array 
     const handleAddPress = () => {
         const product = {
             name: name,
             price: price,
             date: new Date()
         }
-        setData([{ ...product }, ...data])
+        if (name !== "" && price !== "") {
+            setData([{ ...product }, ...data])
+        }
     }
+
+    //inputcard has 2 input to get name and price value and 1 add button
 
     return (
         <SafeAreaView style={styles.container}>

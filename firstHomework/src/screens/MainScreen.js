@@ -12,18 +12,25 @@ import SortButton from '../components/SortButton/SortButton';
 
 const Main = () => {
 
-    const [data, setData] = useState([]);
-    const [sort, setSort] = useState("history");
+    const [data, setData] = useState([]); //data array used to store products
+    const [sort, setSort] = useState("history"); //sort state used to determine which sort button was clicked
 
+
+    //each time new data is added, 
+    //I reorder according to the current sorting state
     useEffect(() => {
         sortData(sort)
     }, [data])
 
+    // productcard used to show name and price value in flatlist
     const renderItem = ({ item }) => (
         <ProductCard data={item} />
     )
 
 
+    // sortdata function is sorting data according to which button clicked
+    // I used sort function of js to sort data
+    // then set it to data array again and set button name into sort state
     const sortData = (text) => {
         if (text === "increase") {
             const sorted = data.sort((a, b) => a.price - b.price);
@@ -38,6 +45,8 @@ const Main = () => {
         setSort(text)
     }
 
+    //I called sortbutton 3 times in header view and I used flatlist to render product values
+    //Inputcard has 2 inputs for name and price value and also have add button
     return (
         <View style={styles.container}>
             <View style={styles.header}>
